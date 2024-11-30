@@ -1,0 +1,21 @@
+{
+    "name": "Python 3",
+    "image": "mcr.microsoft.com/devcontainers/python:3",
+    "features": {
+      "ghcr.io/devcontainers/features/python:1": {
+        "version": "3.9"
+      }
+    },
+    "postCreateCommand": "pip install -r requirements.txt",
+    "customizations": {
+      "vscode": {
+        "settings": {},
+        "extensions": []
+      }
+    },
+    "runArgs": ["--init"],
+    "remoteUser": "vscode",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+    "workspaceFolder": "/workspace",
+    "postStartCommand": "bash start.sh"
+  }
